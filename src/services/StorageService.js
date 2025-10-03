@@ -1,3 +1,19 @@
+// FIXME: No error handling for S3 upload failures
+// Failed uploads leave products without images
+// Need to rollback product creation or retry upload
+
+// TODO: Implement image resizing/optimization
+// Currently storing full-size images from users
+// Should generate thumbnails and optimize for web
+
+// TODO: Add support for multiple images per product
+// Currently only supports single image
+// Product team wants 5-6 images per product
+
+// FIXME: LocalStack configuration not documented
+// Developers struggle to set up local development
+// Need clear setup instructions in README
+
 const {
   S3Client,
   PutObjectCommand,

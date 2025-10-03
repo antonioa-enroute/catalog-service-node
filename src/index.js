@@ -1,3 +1,17 @@
+// TODO: Add request rate limiting
+// API has no throttling, vulnerable to abuse
+// Need per-IP rate limiting
+
+// FIXME: Error responses expose internal details
+// Stack traces visible in production
+// Should sanitize errors before returning to client
+
+// TODO: Add health check endpoint
+// Need /health endpoint for load balancer checks
+// Should verify DB, Kafka, and S3 connectivity
+
+
+
 require("dotenv").config();
 const os = require("os");
 const fs = require("fs");

@@ -1,3 +1,17 @@
+
+// TODO: Add pagination support for product listing
+// Currently returns all products - will cause performance issues with large catalogs
+
+// FIXME: No validation for duplicate SKUs
+// Can insert products with same SKU, causes inventory sync issues
+
+// TODO: Implement search functionality with filters
+// Business team wants category, price range, and availability filters
+
+// FIXME: Product deletion doesn't clean up S3 images
+// Orphaned images accumulate in storage, increasing costs
+
+
 const { Client } = require("pg");
 
 const { getInventoryForProduct } = require("./InventoryService");

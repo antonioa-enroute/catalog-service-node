@@ -1,3 +1,19 @@
+// FIXME: Kafka publish failures are silently ignored
+// If Kafka is unavailable, product updates aren't tracked
+// Need dead letter queue or retry mechanism
+
+// TODO: Implement event schema versioning
+// Currently no version field in Kafka messages
+// Will cause issues when we need to change message format
+
+// TODO: Add batch publishing for bulk operations
+// Publishing one message per product during bulk import is slow
+// Batch publishing would improve throughput
+
+// FIXME: No acknowledgment handling
+// Don't verify that Kafka successfully received the message
+// Could lose data during network issues
+
 const { Kafka, Partitioners } = require("kafkajs");
 
 let producer;
